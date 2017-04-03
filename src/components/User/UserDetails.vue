@@ -8,14 +8,14 @@
 
             <div class="content">
                 <ul>
-                    <li>Name: {{ name }}</li>
+                    <li>
+                        Name: {{ name }}
+                        <button @click="nameToUppercase" class="button is-primary is-small">toUpper</button>
+                        <button @click="callback" class="button is-primary is-small">toLower</button>
+                    </li>
+                    <li>Age: {{ age }}</li>
                 </ul>
             </div>
-
-            <hr>
-
-            <button @click="nameToUppercase" class="button is-light is-fullwidth">Name to Uppercase</button>
-            <button @click="callback" class="button is-light is-fullwidth">Name to Lowercase</button>
 
         </div>
     </div>
@@ -27,6 +27,10 @@
             name: {
                 type: String,
                 default: 'Anonymous'
+            },
+            age: {
+                type: Number,
+                default: 18
             },
             callback: {
                 type: Function,
