@@ -9,7 +9,7 @@
                             <app-user-details name="Jack"></app-user-details>
                         </div>
                         <div class="column">
-                            <div class="box"></div>
+                            <app-user-edit></app-user-edit>
                         </div>
                     </div>
                 </div>
@@ -20,10 +20,12 @@
 
 <script>
     import UserDetails from './UserDetails.vue';
+    import UserEdit from './UserEdit.vue';
 
     export default {
         components: {
-            appUserDetails: UserDetails
+            appUserDetails: UserDetails,
+            appUserEdit: UserEdit
         }
     }
 </script>
