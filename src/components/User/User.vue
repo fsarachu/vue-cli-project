@@ -11,11 +11,11 @@
 
                     <div class="columns">
                         <div class="column">
-                            <app-user-details @changeName="name = $event" :callback="lowerName" :name="name">
+                            <app-user-details @changeName="name = $event" :callback="lowerName" :name="name" :age="age">
                             </app-user-details>
                         </div>
                         <div class="column">
-                            <app-user-edit></app-user-edit>
+                            <app-user-edit :age="age"></app-user-edit>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,8 @@
     export default {
         data: function () {
             return {
-                name: 'Franco'
+                name: 'Franco',
+                age: 21
             };
         },
         methods: {
