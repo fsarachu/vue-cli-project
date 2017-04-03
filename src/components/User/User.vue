@@ -6,6 +6,7 @@
                     <h1 class="title has-text-centered">User</h1>
 
                     <button @click="reverseName" class="button is-primary">Reverse Name</button>
+                    <hr>
 
                     <div class="columns">
                         <div class="column">
