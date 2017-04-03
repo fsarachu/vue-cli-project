@@ -3,10 +3,10 @@
         <div class="hero-body">
             <div class="container">
                 <div class="box">
-                    <h1 class="title has-text-centered">User Component</h1>
-                    <div class="columns is-mobile">
+                    <h1 class="title has-text-centered">User</h1>
+                    <div class="columns">
                         <div class="column">
-                            <div class="box"></div>
+                            <app-user-details name="Jack"></app-user-details>
                         </div>
                         <div class="column">
                             <div class="box"></div>
@@ -19,5 +19,11 @@
 </template>
 
 <script>
-    export default {}
+    import UserDetails from './UserDetails.vue';
+
+    export default {
+        components: {
+            appUserDetails: UserDetails
+        }
+    }
 </script>
