@@ -6,11 +6,12 @@
                     <h1 class="title has-text-centered">This is {{ name }}'s Profile</h1>
 
                     <button @click="reverseName" class="button is-primary is-fullwidth">Reverse Name</button>
+
                     <hr>
 
                     <div class="columns">
                         <div class="column">
-                            <app-user-details :name="name"></app-user-details>
+                            <app-user-details @changeName="name = $event" :name="name"></app-user-details>
                         </div>
                         <div class="column">
                             <app-user-edit></app-user-edit>
