@@ -10,7 +10,6 @@
                 <ul>
                     <li>
                         Name: {{ name }}
-
                         <button @click="nameToUppercase" class="button is-primary is-small">toUpper</button>
                         <button @click="callback" class="button is-primary is-small">toLower</button>
                     </li>
@@ -31,13 +30,18 @@
                 type: String,
                 default: 'Anonymous'
             },
-            age: {
+            initialAge: {
                 type: Number,
                 default: 18
             },
             callback: {
                 type: Function,
                 required: true
+            }
+        },
+        data: function () {
+            return {
+                age: this.initialAge
             }
         },
         methods: {

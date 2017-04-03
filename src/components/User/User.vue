@@ -4,6 +4,7 @@
             <div class="container">
                 <div class="box">
                     <h1 class="title has-text-centered">This is {{ name }}'s Profile</h1>
+                    <h2 class="subtitle has-text-centered">He is {{ age }} years old</h2>
 
                     <button @click="reverseName" class="button is-primary is-fullwidth">Reverse Name</button>
 
@@ -11,11 +12,11 @@
 
                     <div class="columns">
                         <div class="column">
-                            <app-user-details @changeName="name = $event" :callback="lowerName" :name="name" :age="age">
+                            <app-user-details @changeName="name = $event" :callback="lowerName" :name="name" :initialAge="age">
                             </app-user-details>
                         </div>
                         <div class="column">
-                            <app-user-edit :age="age"></app-user-edit>
+                            <app-user-edit :initialAge="age"></app-user-edit>
                         </div>
                     </div>
                 </div>
