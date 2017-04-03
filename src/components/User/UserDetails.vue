@@ -10,6 +10,7 @@
                 <ul>
                     <li>
                         Name: {{ name }}
+
                         <button @click="nameToUppercase" class="button is-primary is-small">toUpper</button>
                         <button @click="callback" class="button is-primary is-small">toLower</button>
                     </li>
@@ -22,6 +23,8 @@
 </template>
 
 <script>
+    import {bus} from '../../main';
+
     export default {
         props: {
             name: {
@@ -41,6 +44,11 @@
             nameToUppercase() {
                 this.$emit('changeName', this.name.toUpperCase());
             }
+        },
+        created() {
+            bus.$on('ageIncremented', newAge => {
+                this.age = newAge;
+            });
         }
     }
 </script>

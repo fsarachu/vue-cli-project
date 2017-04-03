@@ -6,7 +6,8 @@
             <div class="content">
                 <p>
                     Current Age: {{ age }} -
-                    <button class="button is-primary is-small">Increment</button>
+
+                    <button @click="incrementAge" class="button is-primary is-small">Increment</button>
                     <button class="button is-primary is-small">Decrement</button>
                 </p>
             </div>
@@ -15,11 +16,19 @@
 </template>
 
 <script>
+    import {bus} from '../../main'
+
     export default {
         props: {
             age: {
                 type: Number,
                 default: 18
+            }
+        },
+        methods: {
+            incrementAge() {
+                this.age += 1;
+                bus.$emit('ageIncremented', this.age);
             }
         }
     }
