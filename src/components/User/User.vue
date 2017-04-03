@@ -3,9 +3,9 @@
         <div class="hero-body">
             <div class="container">
                 <div class="box">
-                    <h1 class="title has-text-centered">User</h1>
+                    <h1 class="title has-text-centered">This is {{ name }}'s Profile</h1>
 
-                    <button @click="reverseName" class="button is-primary">Reverse Name</button>
+                    <button @click="reverseName" class="button is-primary is-fullwidth">Reverse Name</button>
                     <hr>
 
                     <div class="columns">
