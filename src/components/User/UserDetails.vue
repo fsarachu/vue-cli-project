@@ -15,6 +15,7 @@
             <hr>
 
             <button @click="nameToUppercase" class="button is-light is-fullwidth">Name to Uppercase</button>
+            <button @click="callback" class="button is-light is-fullwidth">Name to Lowercase</button>
 
         </div>
     </div>
@@ -26,6 +27,10 @@
             name: {
                 type: String,
                 default: 'Anonymous'
+            },
+            callback: {
+                type: Function,
+                required: true
             }
         },
         methods: {

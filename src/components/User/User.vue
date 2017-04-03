@@ -11,7 +11,8 @@
 
                     <div class="columns">
                         <div class="column">
-                            <app-user-details @changeName="name = $event" :name="name"></app-user-details>
+                            <app-user-details @changeName="name = $event" :callback="lowerName" :name="name">
+                            </app-user-details>
                         </div>
                         <div class="column">
                             <app-user-edit></app-user-edit>
@@ -36,6 +37,9 @@
         methods: {
             reverseName() {
                 this.name = this.name.split('').reverse().join('');
+            },
+            lowerName() {
+                this.name = this.name.toLowerCase();
             }
         },
         components: {
